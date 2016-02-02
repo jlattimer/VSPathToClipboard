@@ -6,7 +6,7 @@
     <Description xml:space="preserve">Copies the path of a solution item to the clipboard.</Description>
     <License>License.txt</License>
     <Icon>Resources\icon.png</Icon>
-    <PreviewImage>preview.png</PreviewImage>
+    <PreviewImage>Resources\preview.png</PreviewImage>
   </Metadata>
   <Installation InstalledByMsi="false">
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,]" />
