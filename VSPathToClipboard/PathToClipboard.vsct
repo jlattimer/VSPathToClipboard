@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Commands package="GuidVsPtcPkgString">
+    <Groups>
+      <!--Solution Node-->
+      <Group guid="GuidVsPtcCmdSet" id="SolutionMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_SOLNNODE"/>
+      </Group>
+      <!--Project Node-->
+      <Group guid="GuidVsPtcCmdSet" id="ProjectMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE"/>
+      </Group>
+      <!--Project Item Node-->
+      <Group guid="GuidVsPtcCmdSet" id="ItemMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+      <Group guid="GuidVsPtcCmdSet" id="ItemLevelMenuGroup" priority="0x0600">
+        <Parent guid="GuidVsPtcCmdSet" id="ItemLevelMenu"/>
+      </Group>
+    </Groups>
+
+    <Menus>
+      <Menu guid="GuidVsPtcCmdSet" id="ItemLevelMenu" priority="0x100" type="Menu">
+        <Parent guid="GuidVsPtcCmdSet" id="ItemMenuGroup"/>
+        <Strings>
+          <ButtonText>Copy Path To Clipboard</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Buttons>
+      <!--Solution Node-->
+      <Button guid="GuidVsPtcCmdSet" id="CmdidMyCommandSolution" priority="0x0100" type="Button">
+        <Parent guid="GuidVsPtcCmdSet" id="SolutionMenuGroup" />
+        <Icon guid="GuidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Copy Path To Clipboard</ButtonText>
+        </Strings>
+      </Button>
+
+      <!--Project Node-->
+      <Button guid="GuidVsPtcCmdSet" id="CmdidMyCommandProject" priority="0x0100" type="Button">
+        <Parent guid="GuidVsPtcCmdSet" id="ProjectMenuGroup" />
+        <Icon guid="GuidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Copy Path To Clipboard</ButtonText>
+        </Strings>
+      </Button>
+
+      <!--Project Item Node-->
+      <Button guid="GuidVsPtcCmdSet" id="CmdidMyCommandItemFile" priority="0x0100" type="Button">
+        <Parent guid="GuidVsPtcCmdSet" id="ItemLevelMenuGroup" />
+        <Icon guid="GuidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>To File...</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="GuidVsPtcCmdSet" id="CmdidMyCommandItemFolder" priority="0x0105" type="Button">
+        <Parent guid="GuidVsPtcCmdSet" id="ItemLevelMenuGroup" />
+        <Icon guid="GuidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>To Folder...</ButtonText>
+        </Strings>
+      </Button>
+
+    </Buttons>
+    <Bitmaps>
+      <Bitmap guid="GuidImages" href="Resources\clipboard.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+  <Symbols>
+    <GuidSymbol name="GuidVsPtcPkgString" value="{717dba23-b8e2-4678-ab9d-4da3335dd4c2}" />
+
+    <GuidSymbol name="GuidVsPtcCmdSet" value="{028e2d02-98bb-4e21-9208-0c57966493fe}">
+      <IDSymbol name="ItemMenuGroup" value="0x1020" />
+      <IDSymbol name="ItemLevelMenu" value="0x1025" />
+      <IDSymbol name="ItemLevelMenuGroup" value="0x1023" />
+      <IDSymbol name="ProjectMenuGroup" value="0x1030" />
+      <IDSymbol name="SolutionMenuGroup" value="0x1040" />
+      <IDSymbol name="CmdidMyCommandItemFile" value="0x0100" />
+      <IDSymbol name="CmdidMyCommandItemFolder" value="0x0105" />
+      <IDSymbol name="CmdidMyCommandProject" value="0x0200" />
+      <IDSymbol name="CmdidMyCommandSolution" value="0x0300" />
+    </GuidSymbol>
+    <GuidSymbol name="GuidImages" value="{41a8ca6c-cc89-4718-856f-455da42af3c8}" >
+      <IDSymbol name="bmpPic1" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
